@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Whimsical Fullscreen</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      iframe {
+        flex: 1;
+        border: none;
+      }
+
+      .copy-box {
+        background-color: #e9e9e9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+      }
+
+      .copy-box textarea {
+        width: 100%;
+        height: 150px;
+        border: none;
+        background-color: #e9e9e9;
+        resize: none;
+      }
+
+      .copy-box button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .copy-box button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe
+      src="https://whimsical.com/embed/WFJkMytk9sA9QtkU5grmo2@6HYTAunKLgTVtE4mkRQq6VjA5KocJ6kocGWzfpbxgN7WMXB"
+    ></iframe>
+    <div class="copy-box">
+      <h3>Copy Mind Map Code</h3>
+      <textarea readonly>
+Title: API Technologies
+- REST
+  - Stateless Communication
+  - Standard HTTP Methods
+  - Client
+  - Server
+- Webhooks
+  - Real-time Notifications
+  - HTTP Callbacks
+- GraphQL
+  - Query Language
+  - Request Specific Data
+  - Clients
+  - Browser
+- SOAP
+  - Exchanges XML Data
+  - Structured Data
+  - HTTP Protocol
+- WebSockets
+  - Full-duplex Communication
+  - Real-time Data Exchange
+  - Single Long-lived Connection
+- EDA
+  - Event-driven Architecture
+  - Producers
+  - Consumers
+- EDI
+  - Electronic Data Interchange
+  - Structured Business Data
+  - Without Human Intervention
+- SSE
+  - Server-Sent Events
+  - Real-time Notifications
+- AMQP
+  - Advanced Message Queuing Protocol
+  - Open Standard
+  - Message-oriented Middleware
+- MQTT
+  - Lightweight Protocol
+  - Publish-Subscribe Messaging
+  - Designed for Low Bandwidth
+- gRPC
+  - High-performance RPC
+  - Open-source Framework
+  - Protocol Buffers
+        </textarea
+      >
+      <button onclick="copyToClipboard()">Copy Code</button>
+    </div>
+    <script>
+      function copyToClipboard() {
+        const textarea = document.querySelector(".copy-box textarea");
+        textarea.select();
+        document.execCommand("copy");
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
+
