@@ -53,47 +53,61 @@
 
   <body>
     <iframe
-      src="https://whimsical.com/embed/Ds7MqDobPH28wAZxS9AhQz"
+      src="https://whimsical.com/embed/TNpfVufMwwW9xUjwFqgVJp"
     ></iframe>
     <div class="copy-box">
       <h3>Copy Mind Map Code</h3>
       <textarea readonly>
-        Title: Cyber Attack Types on Application Security
-        - Injection Attacks
-          - SQL Injection: The attacker inserts malicious SQL code into queries sent to the database.
-          - Command Injection: The attacker inserts malicious operating system commands through the application.
-          - LDAP Injection: The attacker inserts malicious LDAP code to manipulate directories.
-        - Cross-Site Scripting (XSS)
-          - Stored XSS: Malicious scripts are stored on the server and executed by users when accessing infected data.
-          - Reflected XSS: Malicious scripts are embedded in URLs and executed in the victim's browser when visiting the link.
-          - DOM-Based XSS: Manipulates the DOM in the victim's browser to execute malicious scripts.
-        - Cross-Site Request Forgery (CSRF): The attacker sends malicious requests created by the user to the web application where the user is authenticated.
-        - Broken Authentication and Session Management
-          - Session Hijacking: The attacker steals or forges a user's session to gain unauthorized access.
-          - Credential Stuffing: The attacker uses credentials stolen from other sites to attempt to access user accounts.
-        - Security Misconfiguration
-          - Default Configurations: Using insecure default configurations.
-          - Unnecessary Features: Enabling unnecessary features that can be entry points for attacks.
-        - Sensitive Data Exposure
-          - Insecure Storage: Storing sensitive data without adequate encryption.
-          - Insecure Transmission: Sending sensitive data over insecure connections.
-        - Insufficient Logging and Monitoring
-          - Lack of Logging: Not logging important activities that can help detect attacks.
-          - Inadequate Monitoring: Not monitoring logs or network activities to detect signs of attacks.
-        - Insecure Deserialization: The attacker sends deserialized objects with malicious code to be executed by the application.
-        - Using Components with Known Vulnerabilities: Using libraries or components with known vulnerabilities.
-        - Broken Access Control
-          - Horizontal Privilege Escalation: The attacker accesses data or functions of another user with the same access level.
-          - Vertical Privilege Escalation: The attacker gains access to functions or data of a user with a higher access level.
-        - Denial of Service (DoS): The attacker floods the application with requests, causing performance degradation or stopping functionality.
-        - Man-in-the-Middle (MitM) Attacks: The attacker intercepts communication between two parties to steal or modify data.
-        - Remote Code Execution (RCE): The attacker executes malicious code remotely on the target system.
-        - Phishing and Social Engineering
-          - Phishing: The attacker tricks users into providing sensitive information such as passwords and credit card numbers.
-          - Spear Phishing: Targeted phishing attacks on specific individuals or organizations.
-        - Brute Force Attacks: The attacker tries various combinations of passwords or encryption keys until successful access is obtained.        
-        </textarea
-      >
+        Mindmap: Cyber Attacks
+
+1. Phishing
+   - Description: Fraud using fake emails, texts, or websites to trick individuals into providing personal information.
+   - How it works: Attackers send messages that appear legitimate from trusted sources, encouraging victims to click links or download malicious attachments.
+
+2. Malware
+   - Description: Malicious software designed to damage, disrupt, or gain unauthorized access to computer systems.
+   - Types: Virus, worm, trojan, spyware, ransomware.
+   - How it works: Malware can enter through unauthorized downloads, malicious email attachments, or infected websites.
+
+3. Ransomware
+   - Description: A type of malware that encrypts victim's data and demands ransom for the decryption key.
+   - How it works: Ransomware typically spreads through phishing emails or software vulnerabilities.
+
+4. DDoS (Distributed Denial of Service)
+   - Description: Attacks aimed at making online services unavailable by overwhelming servers with excessive traffic.
+   - How it works: Attackers use botnets (networks of malware-infected computers) to send a large number of requests to the target.
+
+5. Man-in-the-Middle (MitM)
+   - Description: Attacks where the attacker intercepts communication between two parties without their knowledge.
+   - How it works: Attackers can intercept and alter data sent between users and websites or applications.
+
+6. SQL Injection
+   - Description: Attacks that exploit vulnerabilities in web applications to execute unauthorized SQL commands on databases.
+   - How it works: Attackers insert malicious code into web application input forms, which is then executed by the database server.
+
+7. Cross-Site Scripting (XSS)
+   - Description: Attacks where attackers inject malicious scripts into trusted websites.
+   - How it works: The malicious scripts are executed in the user's browser, which can steal data or redirect users to malicious websites.
+
+8. Password Attack
+   - Description: Attacks that attempt to obtain user passwords.
+   - Types: Brute force, dictionary attack, credential stuffing.
+   - How it works: Attackers try various password combinations or use common password lists to gain access to victim accounts.
+
+9. Insider Threat
+   - Description: Threats originating from within an organization by employees, former employees, contractors, or others with internal access.
+   - How it works: Insiders can misuse legitimate access to steal data, damage systems, or disclose sensitive information.
+
+10. Zero-Day Exploit
+    - Description: Attacks that exploit software vulnerabilities unknown to or unpatched by developers.
+    - How it works: Attackers use these exploits before developers have a chance to fix them, making the attacks highly effective.
+
+11. Social Engineering
+    - Description: Psychological manipulation to trick individuals into providing confidential information or performing certain actions.
+    - Types: Phishing, pretexting, baiting, tailgating.
+    - How it works: Attackers use psychological tactics to build trust and exploit human weaknesses.
+   
+      </textarea>
       <button onclick="copyToClipboard()">Copy Code</button>
     </div>
     <script>
