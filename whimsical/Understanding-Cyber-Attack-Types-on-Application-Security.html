@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Whimsical Fullscreen</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      iframe {
+        flex: 1;
+        border: none;
+      }
+
+      .copy-box {
+        background-color: #e9e9e9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+      }
+
+      .copy-box textarea {
+        width: 100%;
+        height: 150px;
+        border: none;
+        background-color: #e9e9e9;
+        resize: none;
+      }
+
+      .copy-box button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .copy-box button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe
+      src="https://whimsical.com/cyber-attack-types-on-application-security-EU9XeG9ZPY1aT8HLNvFv8k"
+    ></iframe>
+    <div class="copy-box">
+      <h3>Copy Mind Map Code</h3>
+      <textarea readonly>
+        Title: Cyber Attack Types on Application Security
+        - Injection Attacks
+          - SQL Injection: The attacker inserts malicious SQL code into queries sent to the database.
+          - Command Injection: The attacker inserts malicious operating system commands through the application.
+          - LDAP Injection: The attacker inserts malicious LDAP code to manipulate directories.
+        - Cross-Site Scripting (XSS)
+          - Stored XSS: Malicious scripts are stored on the server and executed by users when accessing infected data.
+          - Reflected XSS: Malicious scripts are embedded in URLs and executed in the victim's browser when visiting the link.
+          - DOM-Based XSS: Manipulates the DOM in the victim's browser to execute malicious scripts.
+        - Cross-Site Request Forgery (CSRF): The attacker sends malicious requests created by the user to the web application where the user is authenticated.
+        - Broken Authentication and Session Management
+          - Session Hijacking: The attacker steals or forges a user's session to gain unauthorized access.
+          - Credential Stuffing: The attacker uses credentials stolen from other sites to attempt to access user accounts.
+        - Security Misconfiguration
+          - Default Configurations: Using insecure default configurations.
+          - Unnecessary Features: Enabling unnecessary features that can be entry points for attacks.
+        - Sensitive Data Exposure
+          - Insecure Storage: Storing sensitive data without adequate encryption.
+          - Insecure Transmission: Sending sensitive data over insecure connections.
+        - Insufficient Logging and Monitoring
+          - Lack of Logging: Not logging important activities that can help detect attacks.
+          - Inadequate Monitoring: Not monitoring logs or network activities to detect signs of attacks.
+        - Insecure Deserialization: The attacker sends deserialized objects with malicious code to be executed by the application.
+        - Using Components with Known Vulnerabilities: Using libraries or components with known vulnerabilities.
+        - Broken Access Control
+          - Horizontal Privilege Escalation: The attacker accesses data or functions of another user with the same access level.
+          - Vertical Privilege Escalation: The attacker gains access to functions or data of a user with a higher access level.
+        - Denial of Service (DoS): The attacker floods the application with requests, causing performance degradation or stopping functionality.
+        - Man-in-the-Middle (MitM) Attacks: The attacker intercepts communication between two parties to steal or modify data.
+        - Remote Code Execution (RCE): The attacker executes malicious code remotely on the target system.
+        - Phishing and Social Engineering
+          - Phishing: The attacker tricks users into providing sensitive information such as passwords and credit card numbers.
+          - Spear Phishing: Targeted phishing attacks on specific individuals or organizations.
+        - Brute Force Attacks: The attacker tries various combinations of passwords or encryption keys until successful access is obtained.        
+        </textarea
+      >
+      <button onclick="copyToClipboard()">Copy Code</button>
+    </div>
+    <script>
+      function copyToClipboard() {
+        const textarea = document.querySelector(".copy-box textarea");
+        textarea.select();
+        document.execCommand("copy");
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
+
