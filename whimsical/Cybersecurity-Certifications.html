@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Whimsical Fullscreen</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      iframe {
+        flex: 1;
+        border: none;
+      }
+
+      .copy-box {
+        background-color: #e9e9e9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+      }
+
+      .copy-box textarea {
+        width: 100%;
+        height: 150px;
+        border: none;
+        background-color: #e9e9e9;
+        resize: none;
+      }
+
+      .copy-box button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .copy-box button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe
+      src="https://whimsical.com/embed/MbHw6QpyzECcn9rTq5me6a"
+    ></iframe>
+    <div class="copy-box">
+      <h3>Copy Mind Map Code</h3>
+      <textarea readonly>
+Mindmap: Cybersecurity Certifications
+
+- Management Certifications (Red)
+  - Certified Information Systems Security Professional (CISSP)
+    - Provider: (ISC)²
+    - Focus: Comprehensive security knowledge
+    - Requirements: 5+ years of experience
+    - Recommended Experience: Mid to Senior-level professionals
+    - Career Paths: Security Analyst, Security Manager
+    - Industry Recognition: High
+  - Certified Information Security Manager (CISM)
+    - Provider: ISACA
+    - Focus: Security management
+    - Requirements: 5+ years of experience
+    - Recommended Experience: Senior-level professionals
+    - Career Paths: Security Manager, IT Auditor
+    - Industry Recognition: High
+  - Certified Information Systems Auditor (CISA)
+    - Provider: ISACA
+    - Focus: Information systems auditing
+    - Requirements: 5+ years of experience
+    - Recommended Experience: Senior-level professionals
+    - Career Paths: IT Auditor, Compliance Manager
+    - Industry Recognition: High
+
+- Technical Certifications (Blue)
+  - Certified Ethical Hacker (CEH)
+    - Provider: EC-Council
+    - Focus: Ethical hacking, Penetration testing
+    - Requirements: 2+ years of experience
+    - Recommended Experience: Entry to Mid-level professionals
+    - Career Paths: Penetration Tester, Security Consultant
+    - Industry Recognition: Moderate
+  - GIAC Security Essentials (GSEC)
+    - Provider: GIAC
+    - Focus: Foundational security skills
+    - Requirements: None
+    - Recommended Experience: Entry to Mid-level professionals
+    - Career Paths: Security Administrator, IT Manager
+    - Industry Recognition: High
+
+- Entry-Level Certifications (Green)
+  - CompTIA Security+
+    - Provider: CompTIA
+    - Focus: Entry-level security knowledge
+    - Requirements: None (recommended: CompTIA Network+)
+    - Recommended Experience: Entry-level professionals
+    - Career Paths: Security Specialist, Network Administrator
+    - Industry Recognition: High for entry-level
+
+      </textarea>
+      <button onclick="copyToClipboard()">Copy Code</button>
+    </div>
+    <script>
+      function copyToClipboard() {
+        const textarea = document.querySelector(".copy-box textarea");
+        textarea.select();
+        document.execCommand("copy");
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
+
